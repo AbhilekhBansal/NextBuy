@@ -1,53 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    --primary-color: #4f46e5;
-    --primary-bg: #959add;
-    --secondary-color: #f0f0f0;
-    --font-size: 16px;
-    --color2: rgb(46, 46, 46);
-    --color3: rgb(0, 104, 136);
-}
+:root {}
 
-body {
-    user-select: none;
-}
-
-.header {
-    @apply flex items-end justify-end gap-5 p-4;
-
-    a {
-        @apply text-sm font-medium no-underline;
-        color: var(--color2);
-        letter-spacing: 2px;
-
-    }
-
-    a:hover {
-        color: var(--color3);
-    }
-
-    button {
-        @apply text-sm font-medium border-none cursor-pointer bg-transparent;
-    }
-
-    button:hover {
-        color: var(--color3);
-    }
-
-    dialog {
-        @apply border-2 border-r-4 w-24 absolute left-[calc(100%-100px)] top-[8%] bg-white shadow-md rounded-md max-w-md p-3 text-center;
-
-        >div {
-            @apply flex-col justify-start items-center gap-1
-        }
-    }
-}
 
 @layer base {
-  :root {
+    :root {
         --background: 0 0% 100%;
         --foreground: 240 10% 3.9%;
         --card: 0 0% 100%;
@@ -73,8 +33,16 @@ body {
         --chart-4: 43 74% 66%;
         --chart-5: 27 87% 67%;
         --radius: 0.5rem;
+
+        --primary-color: #4f46e5;
+        --primary-bg: #959add;
+        --secondary-color: #f0f0f0;
+        --font-size: 16px;
+        --color2: rgb(46, 46, 46);
+        --color3: rgb(0, 104, 136);
     }
-  .dark {
+
+    .dark {
         --background: 240 10% 3.9%;
         --foreground: 0 0% 98%;
         --card: 240 10% 3.9%;
@@ -99,14 +67,86 @@ body {
         --chart-3: 30 80% 55%;
         --chart-4: 280 65% 60%;
         --chart-5: 340 75% 55%;
+
+        --primary-color: #4f46e5;
+        --primary-bg: #959add;
+        --secondary-color: #f0f0f0;
+        --font-size: 16px;
+        --color2: rgb(46, 46, 46);
+        --color3: rgb(0, 104, 136);
     }
 }
 
 @layer base {
-  * {
-    @apply border-border;
+    * {
+        @apply border-border;
     }
-  body {
-    @apply bg-background text-foreground;
+
+    body {
+        @apply bg-background text-foreground font-inknut;
+        user-select: none;
     }
+
+    .header {
+        @apply flex p-2 h-16;
+    }
+
+    .header-logo {
+        @apply flex-1 items-start;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    .header-menu {
+        @apply flex items-end justify-end gap-5 p-4;
+
+        a {
+            @apply text-sm font-medium no-underline;
+            color: var(--color2);
+            letter-spacing: 2px;
+
+        }
+
+        a:hover {
+            color: var(--color3);
+        }
+
+        button {
+            @apply text-sm font-medium border-none cursor-pointer bg-transparent;
+        }
+
+        button:hover {
+            color: var(--color3);
+        }
+
+        dialog {
+            @apply border-2 border-r-4 w-24 absolute left-[calc(100%-100px)] top-[8%] bg-white shadow-md rounded-md max-w-md p-3 text-center;
+
+            >div {
+                @apply flex-col justify-start items-center gap-1
+            }
+        }
+    }
+
+    .banner-btn {
+        background: #0000002c !important;
+        border: none !important;
+        color: black !important;
+    }
+
+    .banner-btn:hover {
+        background: #0000007c;
+    }
+
+    .tab {
+        @apply flex gap-3;
+    }
+
+    .tab:is(input:checked) {
+        @apply border-b-2 border-primary text-black;
+    }
+
 }

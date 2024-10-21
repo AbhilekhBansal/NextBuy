@@ -6,6 +6,9 @@ export default {
 	],
 	theme: {
 		extend: {
+			fontFamily: {
+				inknut: ['Inknut Antiqua', 'serif'],  // Add your custom font
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
@@ -55,6 +58,8 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [require("tailwindcss-animate"),
+	require('daisyui'),
+	],
 }
 
