@@ -2,7 +2,8 @@
 export default {
 	darkMode: ["class"],
 	content: [
-		"./src/**/*.{js,jsx}", // Add TypeScript extensions
+		"./index.html",
+		"./src/**/*.{js,ts,jsx,tsx}",
 	],
 	theme: {
 		extend: {
@@ -58,8 +59,6 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate"),
-	require('daisyui'),
-	],
+	plugins: [require("tailwindcss-animate")],
 }
 
