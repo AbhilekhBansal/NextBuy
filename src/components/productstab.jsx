@@ -4,63 +4,38 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 
 const cat1 = [
   {
+    id: 1,
     title: "Product 1",
     image: "/src/assets/products/product1.png",
     descriptio: "How to park your car at your garage?",
     btn: "Learn Now",
   },
   {
+    id: 2,
     title: "Product 2",
     image: "/src/assets/products/product2.png",
     descriptio: "How to park your car at your garage?",
     btn: "Learn Now",
   },
-  {
-    title: "Product 3",
-    image: "/src/assets/products/product3.png",
-    descriptio: "How to park your car at your garage?",
-    btn: "Learn Now",
-  },
-  {
-    title: "Product 4",
-    image: "/src/assets/products/product4.png",
-    descriptio: "How to park your car at your garage?",
-    btn: "Learn Now",
-  },
-  {
-    title: "Product 4",
-    image: "/src/assets/products/product4.png",
-    descriptio: "How to park your car at your garage?",
-    btn: "Learn Now",
-  },
-];
 
-const cat2 = [
   {
-    title: "Life hack",
-    image:
-      "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+    id: 3,
+    title: "Product 3",
+    image: "/src/assets/products/product4.png",
     descriptio: "How to park your car at your garage?",
     btn: "Learn Now",
   },
   {
-    title: "Life hack",
-    image:
-      "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+    id: 4,
+    title: "Product 4",
+    image: "/src/assets/products/product6.png",
     descriptio: "How to park your car at your garage?",
     btn: "Learn Now",
   },
   {
-    title: "Life hack",
-    image:
-      "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
-    descriptio: "How to park your car at your garage?",
-    btn: "Learn Now",
-  },
-  {
-    title: "Life hack",
-    image:
-      "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+    id: 5,
+    title: "Product 5",
+    image: "/src/assets/products/product7.png",
     descriptio: "How to park your car at your garage?",
     btn: "Learn Now",
   },
@@ -78,10 +53,10 @@ const Productstab = () => {
         <ProductList products={cat1} />
       </TabsContent>
       <TabsContent value="Trending">
-        <ProductList products={cat2} />
+        <ProductList products={cat1.reverse()} />
       </TabsContent>
       <TabsContent value="New Arrival">
-        <ProductList products={cat2} />
+        <ProductList products={cat1} />
       </TabsContent>
     </Tabs>
   );

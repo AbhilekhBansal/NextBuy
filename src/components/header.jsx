@@ -18,12 +18,12 @@ const Header = () => {
   };
 
   return (
-    <nav className="header shadow-lg border-b-2 flex p-2 h-16">
-      <div className="header-logo flex items-center flex-1 items-start">
+    <nav className="header shadow-lg border-b-2 flex p-2 h-16 ">
+      <div className="header-logo flex items-center flex-1 ">
         <Link to={"/"}>
           <img src="/src/assets/next buy.png" alt="Logo" className="logo" />
         </Link>
-        <p className="font-bold ">Next buy</p>
+        <p className="font-bold ">Nextbuy</p>
       </div>
       <div className="header-menu flex items-end justify-end gap-5 p-4">
         <Link onClick={() => setIsOpen(false)} to={"/"}>

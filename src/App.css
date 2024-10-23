@@ -116,8 +116,30 @@
     }
   }
 
+
+  /* Default styles for mobile (small screens) */
   .banner-img {
+    max-height: 10rem;
     width: -webkit-fill-available;
+    /* For small devices, set a reasonable max height (240px) */
+  }
+
+  /* For tablets (medium screens) */
+  @media (min-width: 48rem) {
+
+    /* 48rem equals 768px */
+    .banner-img {
+      max-height: 18.75rem;
+      width: -webkit-fill-available;
+      /* 18.75rem equals 300px */
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .banner-img {
+      width: -webkit-fill-available;
+      max-height: 21.25rem;
+    }
   }
 
   .banner-btn {
@@ -238,5 +260,110 @@
     margin: 0px;
     padding: 0px;
   }
+
+  .highlight-feature {
+    padding-top: calc(var(--section-pt)* calc(var(--section-prate, 75) / 100));
+    padding-bottom: calc(var(--section-pb)* calc(var(--section-prate, 75) / 100));
+  }
+
+  .hdt-container {
+    padding: 0 1.5rem;
+  }
+
+  .hdt-content_wrap {
+    padding: 20px;
+    font-size: small;
+  }
+
+  @media (min-width: 768px) {
+    .highlight-feature {
+      padding-top: calc(var(--section-pt)* .85);
+      padding-bottom: calc(var(--section-pb)* .85);
+    }
+
+    .hdt-container {
+      max-width: var(--container-max-width-padding-md);
+      padding: 0 3rem;
+    }
+
+    .hdt-content_wrap {
+      padding: 20px;
+    }
+  }
+
+  @media (min-width: 1150px) {
+    .highlight-feature {
+      padding-top: var(--section-pt);
+      padding-bottom: var(--section-pb);
+    }
+
+    .hdt-container {
+      max-width: var(--container-max-width-padding-lg);
+      padding: 0 5rem;
+    }
+
+    .hdt-content_wrap {
+      padding: 20px;
+    }
+  }
+
+  /* footer  */
+  .footer {
+    padding: 20px;
+  }
+
+  .footer p,
+  input {
+    font-family: sans-serif;
+    font-size: .75rem;
+    text-decoration: none;
+    color: #545454;
+    line-height: 22px;
+  }
+
+
+  .footer button,
+  input {
+    margin: 0px;
+    height: 50px !important;
+  }
+
+  .footer .styled-button {
+    left: 0px;
+  }
+
+  .footer .styled-Button button {
+    margin: 0px !important;
+    padding: 0px !important;
+    width: 100px !important;
+  }
+
+
+
+  .footer p span {
+    font-weight: 600;
+    color: #292929;
+  }
+
+  /* mobile  */
+  .footer .container {
+    padding: 0 1rem;
+  }
+
+  /* tab  */
+  @media (min-width:768px) {
+    .footer .container {
+      padding: 0 3rem;
+    }
+
+  }
+
+  /* desktop  */
+  @media (min-width: 1150px) {
+    .footer .container {
+      padding: 0 5rem;
+    }
+  }
+
 
 }

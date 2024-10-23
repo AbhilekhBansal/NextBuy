@@ -1,16 +1,29 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
+import StyledButton from "./extraComponents/StyledButton";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 const Product = ({ product }) => {
+  const navigate = useNavigate();
+  const addtoCart = (id) => {
+    console.log("Add to cart with id ", id);
+  };
   return (
-    <div className="card bg-base-100 w-60 shadow-xl ">
-      <figure>
-        <img src={product.image} alt="Shoes" className="w-full h-72" />
+    <div
+      onClick={() => {
+        navigate("/product/" + product.id);
+      }}
+      className="card bg-base-100 w-60 shadow-lg border border-white hover:border-teal-500 hover:shadow-teal-300"
+    >
+      <figure className="">
+        <img
+          src={product.image}
+          alt="Shoes"
+          className="w-full h-72 object-center object-cover"
+        />
       </figure>
       <div className="card-body px-6 py-2 h-32 p-card">
-        <h4 className="card-title">
-          {product.title}rg ergr thrt hrtyhty htyjhtyrj htyjytjytj y
-        </h4>
+        <h4 className="card-title">{product.title}</h4>
         <div className="card-price justify-start flex flex-wrap">
           <h5 className="sale-price ">₹262</h5>
           <p className="mrp">₹385</p>
@@ -26,8 +39,12 @@ const Product = ({ product }) => {
         </div>
         <div className="flex flex-row-reverse">
           <button
+            onClick={(e) => {
+              e.stopPropagation(); // Prevents click from propagating to parent
+              addtoCart(product.id);
+            }}
             type="button"
-            class="text-white bg-gradient-to-r bg-teal-500  focus:outline-none dark:focus:ring-teal-800 shadow-lg shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80 text-xs px-4 py-2 text-center me-1 mb-2 hover:bg-transparent hover:border-teal-400 hover:border hover:text-teal-400 "
+            className="text-white   bg-black focus:outline-none dark:focus:ring-black-800 shadow-lg dark:shadow-lg dark:shadow-green-800/80 text-xs px-4 py-2 text-center me-1 mb-2 hover:bg-transparent hover:border-black border  hover:text-black rounded-sm ease-in-out"
           >
             Add to cart
           </button>
