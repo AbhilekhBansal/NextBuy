@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
-const Banner = ({ bannerData }) => {
+const Banner = ({ bannerData = [] }) => {
   return (
     <>
       <Carousel
@@ -27,7 +27,7 @@ const Banner = ({ bannerData }) => {
               <CarouselItem key={index}>
                 <img
                   src={banner.image}
-                  className="banner-img object-center object-cover"
+                  className="carousel-img object-center object-cover"
                 />
               </CarouselItem>
             ))}

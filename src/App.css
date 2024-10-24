@@ -118,7 +118,7 @@
 
 
   /* Default styles for mobile (small screens) */
-  .banner-img {
+  .carousel-img {
     max-height: 10rem;
     width: -webkit-fill-available;
     /* For small devices, set a reasonable max height (240px) */
@@ -128,7 +128,7 @@
   @media (min-width: 48rem) {
 
     /* 48rem equals 768px */
-    .banner-img {
+    .carousel-img {
       max-height: 18.75rem;
       width: -webkit-fill-available;
       /* 18.75rem equals 300px */
@@ -136,7 +136,7 @@
   }
 
   @media (min-width: 64rem) {
-    .banner-img {
+    .carousel-img {
       width: -webkit-fill-available;
       max-height: 21.25rem;
     }
@@ -365,5 +365,8 @@
     }
   }
 
+  .size-box .active {
+    border: 1px solid black;
+  }
 
 }
