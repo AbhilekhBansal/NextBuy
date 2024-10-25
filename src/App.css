@@ -369,4 +369,23 @@
     border: 1px solid black;
   }
 
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll 4s linear infinite;
+    display: flex;
+    gap: 2rem;
+    /* Adjust gap to space out duplicated items */
+  }
+
+
+
 }

@@ -25,7 +25,7 @@ const Home = () => {
       </section>
 
       {/* prdoct section */}
-      <section className="home-products flex flex-col items-center justify-center pt-6 pb-6  product-section">
+      <section className="home-products flex flex-col items-center justify-center mt-10 pt-6 pb-6  product-section">
         <h3 className="heading font-bold font-inknut ">Our Top Collections</h3>
         <img className="w-36 pb-4" src="/src/assets/underline.png" />
         <Productstab />

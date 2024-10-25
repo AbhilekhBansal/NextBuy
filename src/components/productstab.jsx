@@ -31,6 +31,7 @@ const cat1 = [
     image: "/src/assets/products/product6.png",
     descriptio: "How to park your car at your garage?",
     btn: "Learn Now",
+    sale: true,
   },
   {
     id: 5,
@@ -38,6 +39,7 @@ const cat1 = [
     image: "/src/assets/products/product7.png",
     descriptio: "How to park your car at your garage?",
     btn: "Learn Now",
+    sale: true,
   },
 ];
 

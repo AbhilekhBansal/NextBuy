@@ -1,26 +1,58 @@
 import React from "react";
-import { FaStar } from "react-icons/fa";
+import { FaBolt, FaRegLightbulb, FaStar } from "react-icons/fa6";
 import StyledButton from "./extraComponents/StyledButton";
 import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const Product = ({ product }) => {
   const navigate = useNavigate();
   const addtoCart = (id) => {
     console.log("Add to cart with id ", id);
   };
+  const saleText = "Hot Sale 19% Off";
   return (
     <div
       onClick={() => {
         navigate("/product/" + product.id);
       }}
-      className="card bg-base-100 w-60 shadow-lg border border-white hover:border-teal-500 hover:shadow-teal-300"
+      className="card bg-base-100 w-60 shadow-lg border rounded-sm border-white hover:border-teal-500 hover:shadow-teal-300"
     >
-      <figure className="">
+      <figure className="max-h-72 rounded-b-md">
         <img
           src={product.image}
           alt="Shoes"
-          className="w-full h-72 object-center object-cover"
+          className="w-full h-72 object-center object-cover rounded-sm rounded-b-lg"
         />
+        {product?.sale && (
+          <div className=" w-full bg-white h-10 relative bottom-7 justify-center justify-items-center items-center my-auto z-20">
+            <Carousel
+              className="rounded-b-md relative overflow-hidden w-full h-8 bg-black text-white flex items-center font-sans uppercase"
+              opts={{
+                loop: true,
+              }}
+              plugins={[
+                Autoplay({
+                  delay: 0,
+                  disableOnInteraction: false,
+                }),
+              ]}
+              animation="slide"
+            >
+              <div className="flex animate-scroll gap-4">
+                {saleText &&
+                  Array.from({ length: 3 }).map((_, index) => (
+                    <CarouselItem
+                      key={index}
+                      className="flex items-center space-x-0 pl-0 font-semibold text-xs"
+                    >
+                      {saleText} <FaBolt className="ml-4 text-teal-400" />
+                    </CarouselItem>
+                  ))}
+              </div>
+            </Carousel>
+          </div>
+        )}
       </figure>
       <div className="card-body px-6 py-2 h-32 p-card">
         <h4 className="card-title">{product.title}</h4>

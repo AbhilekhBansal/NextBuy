@@ -1,13 +1,76 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NextBuy | Shop now </title>
+  <script>
+
+    window.shopUrl = 'http://localhost:5173/';
+    window.routes = {
+      cart_add_url: '/cart/add',
+      cart_change_url: '/cart/change',
+      cart_update_url: '/cart/update',
+      cart_url: '/cart',
+      search_url: '/search',
+      predictive_search_url: '/search/suggest',
+    };
+    window.cartStrings = {
+      error: `There was an error while updating your cart. Please try again.`,
+      no_shipping: `We do not ship to this address.`,
+      shipping_rate: `Shipping rate for {{address}}`,
+      quantityError: `You can only add [quantity] of this item to your cart.`,
+      money_format: "${{amount}}",
+      quick_edit: `Edit option`,
+      cart_symbol: '$'
+    }
+    window.variantStrings = {
+      addToCart: `Add to Cart`,
+      soldOut: `Sold out`,
+      available: `Available`,
+      unavailable: `Unavailable`,
+      preOrder: `Pre-order`,
+      outStock: `outstock`,
+      inStock: `instock`,
+      compare: `Compare`,
+      sale: `Sale`,
+      removeCompare: `Remove from compare`
+    }
+    window.stringsTemplate = {
+      messageRemoveCompare: `Remove from compare`,
+      messageRemoveWishlist: `Remove from wishlist`
+    }
+    window.menuStrings = {
+      verticalTitle: `Categories`,
+      hideMenus: `Hide Categories`,
+      moreMenus: `All Categories`
+    }
+
+    window.productLabel = {
+      saleType: `percent`,
+      saleLabel: `Sale`
+    }
+    window.flashingBrowseTab = {
+      enable: true,
+      firstNotification: `👉 Come back!`,
+      secondaryNotification: `⚡ Hurry We are selling out Fast!`
+    }
+    window.accessibilityStrings = {
+      recipientFormExpanded: `Gift card recipient form expanded`,
+      recipientFormCollapsed: `Gift card recipient form collapsed`,
+    };
+    window.action = {
+      show_all: `Show all`,
+      show_less: `Show less`
+    }
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
