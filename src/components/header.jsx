@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {
+  FaHome,
   FaSearch,
   FaShoppingBag,
   FaSignInAlt,
@@ -27,19 +28,19 @@ const Header = () => {
       </div>
       <div className="header-menu flex items-end justify-end gap-5 p-4">
         <Link onClick={() => setIsOpen(false)} to={"/"}>
-          Home
+          <FaHome className="text-lg" />
         </Link>
         <Link onClick={() => setIsOpen(false)} to={"/search"}>
-          <FaSearch />
+          <FaSearch className="text-lg" />
         </Link>
         <Link onClick={() => setIsOpen(false)} to={"/cart"}>
-          <FaShoppingBag />
+          <FaShoppingBag className=" text-lg" />
         </Link>
 
         {user?._id ? (
           <>
             <button onClick={() => setIsOpen((prev) => !prev)}>
-              <FaUser />
+              <FaUser className="text-lg" />
             </button>
 
             <dialog open={isOpen}>

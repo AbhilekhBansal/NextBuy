@@ -48,7 +48,7 @@ const ProductDetails = () => {
                     productImgs.map((p, index) => (
                       <CarouselItem
                         key={index}
-                        className="pt-1  gap-3 basis-1/6"
+                        className="pt-1  gap-3 basis-1/6 cursor-pointer"
                       >
                         <img
                           src={p.image}

@@ -16,7 +16,8 @@ const Product = ({ product }) => {
       onClick={() => {
         navigate("/product/" + product.id);
       }}
-      className="card bg-base-100 w-60 shadow-lg border rounded-sm border-white hover:border-teal-500 hover:shadow-teal-300"
+      // hover:shadow-teal-300 hover:border-teal-500
+      className="card bg-base-100 w-60 shadow-lg border rounded-sm border-white cursor-pointer"
     >
       <figure className="max-h-72 rounded-b-md">
         <img
