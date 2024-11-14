@@ -11,6 +11,14 @@ const cat1 = [
     btn: "Learn Now",
   },
   {
+    id: 4,
+    title: "Product 4",
+    image: "/src/assets/products/product6.png",
+    descriptio: "How to park your car at your garage?",
+    btn: "Learn Now",
+    sale: true,
+  },
+  {
     id: 2,
     title: "Product 2",
     image: "/src/assets/products/product2.png",
@@ -40,6 +48,13 @@ const cat1 = [
     descriptio: "How to park your car at your garage?",
     btn: "Learn Now",
     sale: true,
+  },
+  {
+    id: 2,
+    title: "Product 2",
+    image: "/src/assets/products/product2.png",
+    descriptio: "How to park your car at your garage?",
+    btn: "Learn Now",
   },
 ];
 

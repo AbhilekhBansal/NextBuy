@@ -1,3 +1,4 @@
+import Search from "@/pages/search";
 import React, { useState } from "react";
 import {
   FaHome,
@@ -8,6 +9,8 @@ import {
   FaUser,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import SearchBar from "./SearchBar";
+import useBreakpoint from "./extraComponents/usebreakpoint";
 
 const user = { _id: "23", role: "user" };
 const Header = () => {
@@ -26,12 +29,15 @@ const Header = () => {
           <p className="font-bold ">Nextbuy</p>
         </Link>
       </div>
-      <div className="header-menu flex items-end justify-end gap-5 p-4">
+      <div className="header-menu flex items-end justify-end gap-5 p-4 ">
+        {/* <Link onClick={() => setIsOpen(false)} to={"/search"}> */}
+        {/* <FaSearch className="text-lg" /> */}
+        {/* </Link> */}
+
+        {useBreakpoint() !== "s" && <SearchBar />}
+
         <Link onClick={() => setIsOpen(false)} to={"/"}>
           <FaHome className="text-lg" />
-        </Link>
-        <Link onClick={() => setIsOpen(false)} to={"/search"}>
-          <FaSearch className="text-lg" />
         </Link>
         <Link onClick={() => setIsOpen(false)} to={"/cart"}>
           <FaShoppingBag className=" text-lg" />

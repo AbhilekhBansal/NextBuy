@@ -114,6 +114,14 @@
         @apply flex-col justify-start items-center gap-1
       }
     }
+
+    input {
+      height: 32px !important;
+    }
+
+    .search {
+      margin-top: -10px;
+    }
   }
 
 
