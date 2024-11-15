@@ -8,6 +8,7 @@ const Home = lazy(() => import("./pages/home"));
 const Search = lazy(() => import("./pages/search"));
 const Cart = lazy(() => import("./pages/cart"));
 const ProductDetails = lazy(() => import("./pages/ProductDetails"));
+const LogIn = lazy(() => import("./pages/loginSignup"));
 
 const App = () => {
   return (
@@ -20,6 +21,8 @@ const App = () => {
           <Route path="/search" element={<Search />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/product/*" element={<ProductDetails />} />
+
+          <Route path="/login" element={<LogIn />} />
         </Routes>
       </Suspense>
       {/* Footer  */}

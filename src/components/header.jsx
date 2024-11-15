@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import SearchBar from "./SearchBar";
 import useBreakpoint from "./extraComponents/usebreakpoint";
 
-const user = { _id: "23", role: "user" };
+const user = { _id: "", role: "user" };
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const logoutHandler = () => {
@@ -22,7 +22,7 @@ const Header = () => {
   };
 
   return (
-    <nav className="header shadow-lg border-b-2 flex p-2 h-16 sticky top-0 z-10 bg-white/80 w-full">
+    <nav className="header shadow-lg border-b-2 flex p-2 h-16 sticky top-0 z-9 bg-white/80 w-full">
       <div className="header-logo flex items-center flex-1 ">
         <Link to={"/"} className="flex items-center">
           <img src="/src/assets/next buy.png" alt="Logo" className="logo" />
