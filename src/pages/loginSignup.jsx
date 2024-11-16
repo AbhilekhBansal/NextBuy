@@ -12,15 +12,15 @@ const LoginSignup = () => {
     }
   };
   const containerClass =
-    " flex sm:flex-col container bg-white rounded-lg shadow-lg shadow-black/25 relative overflow-hidden w-[768px] max-w-full min-h-[480px] " +
+    " flex  container bg-white rounded-lg shadow-lg shadow-black/25 relative overflow-hidden w-[768px] max-w-full min-h-[480px] " +
     (type === "signUp" ? "right-panel-active" : "");
 
   return (
     <div className=" flex justify-center items-center flex-col h-screen  mb-12">
       <div className={containerClass} id="container">
-        <SignUp handleOnClick={setType} />
-        <Login handleOnClick={setType} />
-        <div className="overlay-container sm:hidden ">
+        <SignUp handleOnClick={setType} type={type} />
+        <Login handleOnClick={setType} type={type} />
+        <div className="overlay-container  ">
           <div className="overlay">
             <div className="overlay-panel overlay-left">
               <img

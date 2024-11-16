@@ -1,5 +1,5 @@
 import React from "react";
-function SignInForm({ handleOnClick }) {
+function SignInForm({ handleOnClick, type }) {
   const [state, setState] = React.useState({
     email: "",
     password: "",
@@ -27,7 +27,12 @@ function SignInForm({ handleOnClick }) {
   };
 
   return (
-    <div className="absolute top-0 h-full transition-all duration-600 ease-in-out left-0 w-1/2 z-20  ">
+    // z-20
+    <div
+      className={`absolute top-0 h-full transition-all duration-600 ease-in-out left-0 w-full lg:w-1/2 ${
+        type === "login" ? "z-20" : ""
+      }`}
+    >
       <form
         onSubmit={handleOnSubmit}
         className="bg-white flex items-center justify-center flex-col px-12 py-0 h-full text-center"

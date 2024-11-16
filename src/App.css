@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -31,7 +31,7 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --radius: 0.5rem
+    --radius: 0.5rem;
   }
 
   .dark {
@@ -58,7 +58,7 @@
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%
+    --chart-5: 340 75% 55%;
   }
 }
 
@@ -92,7 +92,6 @@
       @apply text-sm font-medium no-underline;
       color: var(--color2);
       letter-spacing: 2px;
-
     }
 
     a:hover {
@@ -110,8 +109,8 @@
     dialog {
       @apply border-2 border-r-4 w-24 absolute left-[calc(100%-100px)] top-[8%] bg-white shadow-md rounded-md max-w-md p-3 text-center;
 
-      >div {
-        @apply flex-col justify-start items-center gap-1
+      > div {
+        @apply flex-col justify-start items-center gap-1;
       }
     }
 
@@ -124,7 +123,6 @@
     }
   }
 
-
   /* Default styles for mobile (small screens) */
   .carousel-img {
     max-height: 10rem;
@@ -134,7 +132,6 @@
 
   /* For tablets (medium screens) */
   @media (min-width: 48rem) {
-
     /* 48rem equals 768px */
     .carousel-img {
       max-height: 18.75rem;
@@ -163,7 +160,6 @@
   .banner-btn.next {
     right: 20px;
   }
-
 
   .banner-btn:hover {
     background: #0000007c;
@@ -205,7 +201,7 @@
     font-weight: 700;
     font-size: 20px;
     line-height: 31px;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     margin: 0px;
     padding: 0px;
   }
@@ -216,7 +212,7 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     margin: 0px 8px;
     padding: 0px;
     text-decoration: line-through;
@@ -228,7 +224,7 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     margin: 0px;
     padding: 0px;
 
@@ -270,8 +266,10 @@
   }
 
   .highlight-feature {
-    padding-top: calc(var(--section-pt)* calc(var(--section-prate, 75) / 100));
-    padding-bottom: calc(var(--section-pb)* calc(var(--section-prate, 75) / 100));
+    padding-top: calc(var(--section-pt) * calc(var(--section-prate, 75) / 100));
+    padding-bottom: calc(
+      var(--section-pb) * calc(var(--section-prate, 75) / 100)
+    );
   }
 
   .hdt-container {
@@ -285,8 +283,8 @@
 
   @media (min-width: 768px) {
     .highlight-feature {
-      padding-top: calc(var(--section-pt)* .85);
-      padding-bottom: calc(var(--section-pb)* .85);
+      padding-top: calc(var(--section-pt) * 0.85);
+      padding-bottom: calc(var(--section-pb) * 0.85);
     }
 
     .hdt-container {
@@ -323,12 +321,11 @@
   .footer p,
   input {
     font-family: sans-serif;
-    font-size: .75rem;
+    font-size: 0.75rem;
     text-decoration: none;
     color: #545454;
     line-height: 22px;
   }
-
 
   .footer button,
   input {
@@ -346,8 +343,6 @@
     width: 100px !important;
   }
 
-
-
   .footer p span {
     font-weight: 600;
     color: #292929;
@@ -359,11 +354,10 @@
   }
 
   /* tab  */
-  @media (min-width:768px) {
+  @media (min-width: 768px) {
     .footer .container {
       padding: 0 3rem;
     }
-
   }
 
   /* desktop  */
@@ -404,6 +398,11 @@
     overflow: hidden;
     transition: transform 0.6s ease-in-out;
     z-index: 100;
+  }
+  @media (max-width: 768px) {
+    .overlay-container {
+      display: none;
+    }
   }
 
   .container.right-panel-active .overlay-container {
@@ -461,5 +460,4 @@
   .container.right-panel-active .overlay-right {
     transform: translateX(20%);
   }
-
 }
