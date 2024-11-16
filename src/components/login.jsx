@@ -109,7 +109,7 @@ function SignInForm({ handleOnClick, type }) {
             className="text-xs font-medium text-[#0a9b90] hover:underline cursor-pointer"
             onClick={() => handleOnClick("signUp")}
           >
-            Sign Up
+            SignUp
           </span>
         </p>
       </form>

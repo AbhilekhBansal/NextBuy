@@ -15,7 +15,7 @@ const LoginSignup = () => {
     (type === "signUp" ? "right-panel-active" : "");
 
   return (
-    <div className=" flex justify-center items-center flex-col my-12 bg-white z-1  ">
+    <div className=" flex justify-center items-center flex-col my-10 bg-white z-1  ">
       <div className={containerClass} id="container">
         <SignUp handleOnClick={setType} type={type} />
         <Login handleOnClick={setType} type={type} />

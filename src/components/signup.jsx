@@ -39,21 +39,13 @@ function SignUpForm({ handleOnClick, type }) {
         onSubmit={handleOnSubmit}
         className="bg-white flex items-center justify-center flex-col px-12 py-0 h-full text-center"
       >
-        <h1>Create Account</h1>
-        <div className="social-container">
-          <a href="#" className="social">
-            <i className="fab fa-facebook-f" />
-          </a>
-          <a href="#" className="social">
-            <i className="fab fa-google-plus-g" />
-          </a>
-          <a href="#" className="social">
-            <i className="fab fa-linkedin-in" />
-          </a>
-        </div>
-        <span>or use your email for registration</span>
+        <h1 className="font-sans font-bold text-2xl">Create Account</h1>
+
+        <span className="font-sans text-xs text-slate-400">
+          or use your email for registration
+        </span>
         <input
-          className="bg-gray-200 border-none py-3 px-4 my-2 w-full"
+          className="bg-[#fafafa] text-slate-400 border-none !h-12 py-3 px-4 my-2 w-full rounded-xl"
           type="text"
           name="name"
           value={state.name}
@@ -61,7 +53,7 @@ function SignUpForm({ handleOnClick, type }) {
           placeholder="Name"
         />
         <input
-          className="bg-gray-200 border-none py-3 px-4 my-2 w-full"
+          className="bg-[#fafafa] text-slate-400 border-none !h-12 py-3 px-4 my-2 w-full rounded-xl"
           type="email"
           name="email"
           value={state.email}
@@ -69,15 +61,28 @@ function SignUpForm({ handleOnClick, type }) {
           placeholder="Email"
         />
         <input
-          className="bg-gray-200 border-none py-3 px-4 my-2 w-full"
-          type="password"
+          className="bg-[#fafafa] text-slate-400 border-none !h-12 py-3 px-4 my-2 w-full rounded-xl"
+          type="text"
           name="password"
           value={state.password}
           onChange={handleChange}
           placeholder="Password"
         />
-        <button>Sign Up</button>
-        <p onClick={() => handleOnClick("login")}>signIn</p>
+        <button
+          type="submit"
+          className="w-full font-medium font-sans bg-yellow-400/90 text-white py-2 px-4 rounded-xl  my-2"
+        >
+          Sign Up
+        </button>
+        <p className="text-xs font-sans text-slate-400">
+          have an account?
+          <span
+            className="text-xs font-medium text-[#0a9b90] hover:underline cursor-pointer"
+            onClick={() => handleOnClick("login")}
+          >
+            SignIn
+          </span>
+        </p>
       </form>
     </div>
   );
