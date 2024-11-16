@@ -6,7 +6,7 @@ const HighlightFeature = () => {
   return (
     <div className="hdt-container">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 rounded overflow-hidden bg-neutral-100 shadow-lg">
-        <div className="relative overflow-hidden block w-full h-full">
+        <div className="inherit  overflow-hidden block w-full h-full">
           <img
             src="https://demo-ecomus-global.myshopify.com/cdn/shop/files/wm_img_text_1.jpg?v=1706499104&width=1200"
             alt="Image description"

@@ -27,7 +27,7 @@ const ProductDetails = () => {
     window.scroll(0, 0);
   }, []);
   return (
-    <div className="product-details py-7">
+    <div className="product-details mt-16 py-7">
       {/* top view  */}
       <div className="product-copntainer grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div className="col-span-1 lg:col-span-1 image-container ">

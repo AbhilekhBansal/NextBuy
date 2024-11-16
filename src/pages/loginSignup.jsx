@@ -1,7 +1,6 @@
 import Login from "@/components/login";
 import SignUp from "@/components/signup";
 import React, { useState } from "react";
-// import "../css/login.css";
 
 const LoginSignup = () => {
   const [type, setType] = useState("login");
@@ -12,11 +11,11 @@ const LoginSignup = () => {
     }
   };
   const containerClass =
-    " flex  container bg-white rounded-lg shadow-lg shadow-black/25 relative overflow-hidden w-[768px] max-w-full min-h-[480px] " +
+    " flex mt-20 container bg-white rounded-lg shadow-lg shadow-black/25 relative overflow-hidden w-[768px] max-w-full min-h-[480px] " +
     (type === "signUp" ? "right-panel-active" : "");
 
   return (
-    <div className=" flex justify-center items-center flex-col h-screen  mb-12">
+    <div className=" flex justify-center items-center flex-col my-12 bg-white z-1  ">
       <div className={containerClass} id="container">
         <SignUp handleOnClick={setType} type={type} />
         <Login handleOnClick={setType} type={type} />
@@ -25,13 +24,13 @@ const LoginSignup = () => {
             <div className="overlay-panel overlay-left">
               <img
                 src="src/assets/loginBanner.jpg"
-                className="h-full w-full object-fill"
+                className="h-full w-full object-fill rounded-lg"
               />
             </div>
             <div className="overlay-panel overlay-right">
               <img
                 src="src/assets/loginBanner.jpg"
-                className="h-full w-full object-fill"
+                className="h-full w-full object-fill rounded-lg"
               />
             </div>
           </div>

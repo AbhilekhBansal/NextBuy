@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FaSearch } from "react-icons/fa";
+import { IoSearchOutline } from "react-icons/io5";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const SearchBar = () => {
@@ -27,12 +27,12 @@ const SearchBar = () => {
   }, [location.search]);
 
   return (
-    <div className="search flex border mx-[2%] w-[96%] md:w-[80%] lg:w-[96%] m-auto mt-3 rounded-md shadow-lg">
+    <div className="search flex border border-slate-400  mx-[2%] w-[96%] md:w-[80%] lg:w-[96%] m-auto mt-3 rounded-lg shadow-lg">
       <div className="w-12 flex items-center justify-center">
-        <FaSearch />
+        <IoSearchOutline />
       </div>
       <input
-        className="w-full text-base outline-none border-transparent focus:border-transparent focus:ring-0"
+        className="w-full mr-1 text-base outline-none border-transparent focus:border-transparent focus:ring-0"
         type="text"
         placeholder="Search..."
         value={searchQuery}

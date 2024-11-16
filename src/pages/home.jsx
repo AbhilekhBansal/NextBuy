@@ -20,7 +20,7 @@ const Home = () => {
     { title: "Home3", image: "/src/assets/banner12.png" },
   ];
   return (
-    <div className="home">
+    <div className="home mt-16">
       {/* Search only for mobile  */}
       {useBreakpoint() === "s" && (
         <div>

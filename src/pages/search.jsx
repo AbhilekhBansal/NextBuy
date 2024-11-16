@@ -108,7 +108,7 @@ const Search = () => {
         </div>
       )}
       {/* <SearchBar /> */}
-      <div className="flex items-start flex-wrap mt-4 lg:mt-8 mb-12">
+      <div className="flex items-start flex-wrap mt-4 lg:mt-24 mb-12">
         <div className="sidebar relative w-full md:w-[20rem] pr-0">
           <div className="bg-white  ">
             <div className="relative  ">

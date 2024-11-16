@@ -27,7 +27,7 @@ const Banner = ({ bannerData = [] }) => {
               <CarouselItem key={index}>
                 <img
                   src={banner.image}
-                  className="carousel-img object-center object-cover"
+                  className=" carousel-img object-center object-cover"
                 />
               </CarouselItem>
             ))}
