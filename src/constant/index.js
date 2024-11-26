@@ -30,3 +30,59 @@ export const productImgs = [
     { image: product4 },
     { image: product5 },
 ];
+
+export const cat1 = [
+    {
+        id: 1,
+        title: "Product 1",
+        image: product1,
+        descriptio: "How to park your car at your garage?",
+        btn: "Learn Now",
+    },
+    {
+        id: 4,
+        title: "Product 4",
+        image: product4,
+        descriptio: "How to park your car at your garage?",
+        btn: "Learn Now",
+        sale: true,
+    },
+    {
+        id: 2,
+        title: "Product 2",
+        image: product2,
+        descriptio: "How to park your car at your garage?",
+        btn: "Learn Now",
+    },
+
+    {
+        id: 3,
+        title: "Product 3",
+        image: product3,
+        descriptio: "How to park your car at your garage?",
+        btn: "Learn Now",
+    },
+    {
+        id: 4,
+        title: "Product 4",
+        image: product4,
+        descriptio: "How to park your car at your garage?",
+        btn: "Learn Now",
+        sale: true,
+    },
+    {
+        id: 5,
+        title: "Product 5",
+        image: product5,
+        descriptio: "How to park your car at your garage?",
+        btn: "Learn Now",
+        sale: true,
+    },
+    {
+        id: 2,
+        title: "Product 2",
+        image: product2,
+        descriptio: "How to park your car at your garage?",
+        btn: "Learn Now",
+    },
+];

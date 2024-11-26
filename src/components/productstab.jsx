@@ -1,62 +1,7 @@
 import React from "react";
 import ProductList from "./productList";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
-
-const cat1 = [
-  {
-    id: 1,
-    title: "Product 1",
-    image: "/src/assets/products/product1.png",
-    descriptio: "How to park your car at your garage?",
-    btn: "Learn Now",
-  },
-  {
-    id: 4,
-    title: "Product 4",
-    image: "/src/assets/products/product6.png",
-    descriptio: "How to park your car at your garage?",
-    btn: "Learn Now",
-    sale: true,
-  },
-  {
-    id: 2,
-    title: "Product 2",
-    image: "/src/assets/products/product2.png",
-    descriptio: "How to park your car at your garage?",
-    btn: "Learn Now",
-  },
-
-  {
-    id: 3,
-    title: "Product 3",
-    image: "/src/assets/products/product4.png",
-    descriptio: "How to park your car at your garage?",
-    btn: "Learn Now",
-  },
-  {
-    id: 4,
-    title: "Product 4",
-    image: "/src/assets/products/product6.png",
-    descriptio: "How to park your car at your garage?",
-    btn: "Learn Now",
-    sale: true,
-  },
-  {
-    id: 5,
-    title: "Product 5",
-    image: "/src/assets/products/product7.png",
-    descriptio: "How to park your car at your garage?",
-    btn: "Learn Now",
-    sale: true,
-  },
-  {
-    id: 2,
-    title: "Product 2",
-    image: "/src/assets/products/product2.png",
-    descriptio: "How to park your car at your garage?",
-    btn: "Learn Now",
-  },
-];
+import { cat1 } from "@/constant";
 
 const Productstab = () => {
   return (

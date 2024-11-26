@@ -1,5 +1,6 @@
 import React from "react";
 import StyledButton from "./extraComponents/StyledButton";
+import logo from "@/assets/next buy.png";
 
 const Footer = () => {
   return (
@@ -9,11 +10,7 @@ const Footer = () => {
           {/* logo */}
           <div className="w-full sm:w-1/2 lg:w-1/4 px-2">
             <div className="flex items-center">
-              <img
-                src="/src/assets/next buy.png"
-                alt="logo"
-                className="w-16 h-16 object-cover"
-              />
+              <img src={logo} alt="logo" className="w-16 h-16 object-cover" />
               <h3 className="text-2xl font-bold ml-3">Nextbuy</h3>
             </div>
             <div className="mt-4">

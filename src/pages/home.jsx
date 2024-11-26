@@ -9,6 +9,7 @@ import Footer from "@/components/footer";
 import SearchBar from "@/components/SearchBar";
 import useBreakpoint from "@/components/extraComponents/usebreakpoint";
 import { banner } from "@/constant";
+import underLine from "@/assets/underline.png";
 
 const Home = () => {
   return (
@@ -27,7 +28,7 @@ const Home = () => {
       {/* prdoct section */}
       <section className="home-products flex flex-col items-center justify-center mt-10 pt-6 pb-6  product-section">
         <h3 className="heading font-bold font-inknut ">Our Top Collections</h3>
-        <img className="w-36 pb-4" src="/src/assets/underline.png" />
+        <img className="w-36 pb-4" src={underLine} />
         <Productstab />
       </section>
 
