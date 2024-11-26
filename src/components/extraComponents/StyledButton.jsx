@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./StyledButton.css";
+import "./styledButton.css";
 
 const StyledButton = ({ title = "Shop Now" }) => {
   return (
