@@ -7,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { productImgs } from "@/constant";
 import React, { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
 
@@ -14,13 +15,7 @@ const ProductDetails = () => {
   const breakpoint = useBreakpoint();
   const sizes = ["S", "M", "L", "XL"];
   const [selectSize, setSeletcSize] = useState(null);
-  const productImgs = [
-    { image: "/src/assets/products/product6.png" },
-    { image: "/src/assets/products/product3.png" },
-    { image: "/src/assets/products/product1.png" },
-    { image: "/src/assets/products/product2.png" },
-    { image: "/src/assets/products/product4.png" },
-  ];
+
   const [mainImg, setMainImg] = useState(productImgs[0].image);
   console.log("selected size - ", selectSize);
   useEffect(() => {

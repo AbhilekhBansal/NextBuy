@@ -8,17 +8,9 @@ import Brands from "@/components/brands";
 import Footer from "@/components/footer";
 import SearchBar from "@/components/SearchBar";
 import useBreakpoint from "@/components/extraComponents/usebreakpoint";
+import { banner } from "@/constant";
 
 const Home = () => {
-  const banner = [
-    { title: "Home3", image: "/src/assets/banner9.png" },
-    { title: "Home2", image: "/src/assets/banner2.png" },
-    { title: "Home1", image: "/src/assets/banner1.png" },
-    { title: "Home3", image: "/src/assets/banner3.png" },
-    { title: "Home3", image: "/src/assets/banner10.png" },
-    { title: "Home3", image: "/src/assets/banner11.png" },
-    { title: "Home3", image: "/src/assets/banner12.png" },
-  ];
   return (
     <div className="home mt-16">
       {/* Search only for mobile  */}

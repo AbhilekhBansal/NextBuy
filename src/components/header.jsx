@@ -11,6 +11,7 @@ import {
 import { Link } from "react-router-dom";
 import SearchBar from "./SearchBar";
 import useBreakpoint from "./extraComponents/usebreakpoint";
+import logo from "@/assets/next buy.png";
 
 const user = { _id: "", role: "user" };
 const Header = () => {
@@ -25,7 +26,7 @@ const Header = () => {
     <nav className=" header shadow-lg border-b-2 flex p-2 h-16 absolute top-0 !z-999 bg-white/80 w-full">
       <div className="header-logo flex items-center flex-1 ">
         <Link to={"/"} className="flex items-center">
-          <img src="/src/assets/next buy.png" alt="Logo" className="logo" />
+          <img src={logo} alt="Logo" className="logo" />
           <p className="font-bold ">Nextbuy</p>
         </Link>
       </div>
