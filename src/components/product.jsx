@@ -26,7 +26,7 @@ const Product = ({ product }) => {
           className="w-full h-72 object-center object-cover rounded-sm rounded-b-lg"
         />
         {product?.sale && (
-          <div className="inherit w-full bg-white h-10  bottom-7 justify-center justify-items-center items-center my-auto z-20">
+          <div className="relative w-full bg-white h-10  bottom-7 justify-center justify-items-center items-center my-auto z-20">
             <Carousel
               className="rounded-b-md inherit overflow-hidden w-full h-8 bg-black text-white flex items-center font-sans uppercase"
               opts={{
