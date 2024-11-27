@@ -11,72 +11,9 @@ import {
 import { Slider } from "@/components/ui/slider";
 import React, { useEffect, useState } from "react";
 import { FaAngleDown } from "react-icons/fa";
+import { cat1 } from "@/constant/index.js";
 
 const Search = () => {
-  const products = [
-    {
-      id: 1,
-      title: "Product 1",
-      image: "/src/assets/products/product1.png",
-      descriptio: "How to park your car at your garage?",
-      btn: "Learn Now",
-    },
-    {
-      id: 4,
-      title: "Product 4",
-      image: "/src/assets/products/product6.png",
-      descriptio: "How to park your car at your garage?",
-      btn: "Learn Now",
-      sale: true,
-    },
-    {
-      id: 5,
-      title: "Product 5",
-      image: "/src/assets/products/product7.png",
-      descriptio: "How to park your car at your garage?",
-      btn: "Learn Now",
-      sale: true,
-    },
-    {
-      id: 2,
-      title: "Product 2",
-      image: "/src/assets/products/product2.png",
-      descriptio: "How to park your car at your garage?",
-      btn: "Learn Now",
-    },
-    {
-      id: 5,
-      title: "Product 5",
-      image: "/src/assets/products/product7.png",
-      descriptio: "How to park your car at your garage?",
-      btn: "Learn Now",
-      sale: true,
-    },
-
-    {
-      id: 3,
-      title: "Product 3",
-      image: "/src/assets/products/product4.png",
-      descriptio: "How to park your car at your garage?",
-      btn: "Learn Now",
-    },
-    {
-      id: 4,
-      title: "Product 4",
-      image: "/src/assets/products/product6.png",
-      descriptio: "How to park your car at your garage?",
-      btn: "Learn Now",
-      sale: true,
-    },
-    {
-      id: 5,
-      title: "Product 5",
-      image: "/src/assets/products/product7.png",
-      descriptio: "How to park your car at your garage?",
-      btn: "Learn Now",
-      sale: true,
-    },
-  ];
   const categories = ["Shirts", "Formal Shirts", "Pants"];
 
   const [searchQuery, setSearchQuery] = useState("");
@@ -223,7 +160,7 @@ const Search = () => {
         </div>
         <div className="products flex relative pr-2 pl-2 flex-1">
           <div className="w-full max-w-full px-0 md:max-w-[720px] lg:max-w-[960px]">
-            <ProductList products={products} />
+            <ProductList products={cat1} />
           </div>
         </div>
       </div>

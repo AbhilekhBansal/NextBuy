@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { IoShieldCheckmarkOutline } from "react-icons/io5";
+import product1 from "@/assets/products/product1.png";
+import product3 from "@/assets/products/product3.png";
 
 const CartPage = () => {
   const [quantity, setQuantity] = useState(1);
@@ -24,7 +26,7 @@ const CartPage = () => {
         <div className="py-4 border-b">
           <div className="flex items-center gap-4  pb-4">
             <img
-              src="https://via.placeholder.com/100"
+              src={product1}
               alt="Product"
               className="w-24 h-24 rounded-md"
             />
@@ -64,7 +66,7 @@ const CartPage = () => {
         <div className="py-4 border-b">
           <div className="flex items-center gap-4  pb-4">
             <img
-              src="https://via.placeholder.com/100"
+              src={product3}
               alt="Product"
               className="w-24 h-24 rounded-md"
             />
