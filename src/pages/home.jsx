@@ -13,7 +13,7 @@ import underLine from "@/assets/underline.png";
 
 const Home = () => {
   return (
-    <div className="home mt-16">
+    <div className="home mt-0">
       {/* Search only for mobile  */}
       {useBreakpoint() === "s" && (
         <div>

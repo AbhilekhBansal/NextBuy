@@ -12,9 +12,10 @@ import { Slider } from "@/components/ui/slider";
 import React, { useEffect, useState } from "react";
 import { FaAngleDown } from "react-icons/fa";
 import { cat1 } from "@/constant/index.js";
+import useStore from "@/store/store";
 
 const Search = () => {
-  const categories = ["Shirts", "Formal Shirts", "Pants"];
+  const { categories } = useStore();
 
   const [searchQuery, setSearchQuery] = useState("");
 
