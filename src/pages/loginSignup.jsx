@@ -4,12 +4,13 @@ import React, { useState } from "react";
 
 const LoginSignup = () => {
   const [type, setType] = useState("login");
-  const handleOnClick = (text) => {
-    if (text !== type) {
-      setType(text);
-      return;
-    }
-  };
+
+  // const handleOnClick = (text) => {
+  //   if (text !== type) {
+  //     setType(text);
+  //     return;
+  //   }
+  // };
   const containerClass =
     " flex mt-20 container bg-white rounded-lg shadow-lg shadow-black/25 relative overflow-hidden w-[768px] max-w-full min-h-[480px] " +
     (type === "signUp" ? "right-panel-active" : "");

@@ -1,3 +1,5 @@
+import { auth } from "@/firebase";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import React, { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
@@ -25,13 +27,24 @@ function SignInForm({ handleOnClick, type }) {
     evt.preventDefault();
 
     const { email, password } = state;
-    alert(`You are logging in with email: ${email} and password: ${password}`);
+    // alert(`You are logging in with email: ${email} and password: ${password}`);
 
     for (const key in state) {
       setState({
         ...state,
         [key]: "",
       });
+    }
+  };
+
+  const loginHandler = async () => {
+    // login logic here
+    try {
+      const provider = new GoogleAuthProvider();
+      const { user } = await signInWithPopup(auth, provider);
+      console.log(user);
+    } catch (err) {
+      console.log(err);
     }
   };
 
@@ -96,7 +109,10 @@ function SignInForm({ handleOnClick, type }) {
         </div>
         {/* Social login buttons can go here */}
         <div className="flex space-x-4 font-sans">
-          <button className=" flex items-center gap-2 text-xs text-black font-medium border-[1.3px] border-slate-400 px-4 py-2 rounded-sm">
+          <button
+            className=" flex items-center gap-2 text-xs text-black font-medium border-[1.3px] border-slate-400 px-4 py-2 rounded-sm"
+            onClick={loginHandler}
+          >
             <FcGoogle /> Google
           </button>
           {/* <button className="text-sm text-black font-medium border-[1.5px]  px-4 py-2 rounded-sm">

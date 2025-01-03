@@ -4,6 +4,7 @@ import Loader from "./components/loader";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import AdminLogin from "./admin/pages/AdminLogin";
+import { Toaster } from "react-hot-toast";
 
 const Home = lazy(() => import("./pages/home"));
 const Search = lazy(() => import("./pages/search"));
@@ -38,6 +39,7 @@ const App = () => {
           <Route path="/admin/login" element={<AdminLogin />} />
         </Routes>
       </Suspense>
+      <Toaster position="bottom-center" />
     </Router>
   );
 };

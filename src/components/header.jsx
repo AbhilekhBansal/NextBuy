@@ -53,7 +53,16 @@ const Header = () => {
     };
 
     fetchCategories();
-  }, [categories]);
+  }, []);
+
+  // Handle hover state for category dropdown
+  const handleMouseEnter = () => {
+    setCatOpen(true); // Open the dropdown
+  };
+
+  const handleMouseLeave = () => {
+    setCatOpen(false); // Close the dropdown
+  };
 
   return (
     <nav className=" header shadow-lg border-b-2 flex p-2 h-16 relative top-0 !z-999 bg-white/80 w-full">
@@ -64,31 +73,28 @@ const Header = () => {
         </Link>
       </div>
       <div className="header-menu flex items-end justify-end gap-5 p-4 ">
-        {/* <Link onClick={() => setIsOpen(false)} to={"/search"}> */}
-        {/* <FaSearch className="text-lg" /> */}
-        {/* </Link> */}
-
         {useBreakpoint() !== "s" && <SearchBar />}
 
-        {/* <Link onClick={() => setIsOpen(false)} to={"/"}>
-
-          <FaHome className="text-lg" />
-        </Link> */}
-        <DropdownMenu
-          open={catOpen}
-          onOpenChange={(state) => setCatOpen(state)}
+        <div
+          className="relative group"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
-          <DropdownMenuTrigger className="relative">
-            Category
-          </DropdownMenuTrigger>
-          <DropdownMenuContent className="absolute top-full left-0 z-50 bg-white shadow-lg p-2">
+          <span>Category</span>
+          <div
+            className={`absolute top-full left-0 w-max z-50 bg-white shadow-lg shadow-black  p-2 transition-opacity duration-300 ${
+              catOpen ? "opacity-100" : "opacity-0"
+            }`}
+          >
             {categories.map((c, index) => (
-              <DropdownMenuItem key={index} onClick={() => setCatOpen(false)}>
-                <Link to="/search">{c}</Link>
-              </DropdownMenuItem>
+              <div key={index} className="p-2 hover:text-blue-700 capitalize">
+                <Link to="/search" className="!text-xs">
+                  {c}
+                </Link>
+              </div>
             ))}
-          </DropdownMenuContent>
-        </DropdownMenu>
+          </div>
+        </div>
 
         {/* <Link
           className="flex row"
